@@ -1,0 +1,17 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>{{ team.Name }}</mat-card-title>
+  </mat-card-header>
+  <img
+    class="box-image"
+    mat-card-image
+    src="{{ team.WikipediaLogoUrl }}"
+    alt="photo of {{ team.Name }}"
+  />
+
+  <mat-card-content class="footer-card">
+    <div class="links">
+      <a href="" routerLink="{{link}}">Players</a>
+    </div>
+  </mat-card-content>
+</mat-card>

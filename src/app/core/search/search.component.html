@@ -1,7 +1,13 @@
 <div id="container">
   <mat-form-field apparence="outline">
     <mat-label>Search</mat-label>
-    <input type="text" matInput #search (keyup)=searchKey(search.value)/>
+    <input
+      type="text"
+      matInput
+      #filter
+
+      (keyup)="emitKeyPressioned(filter.value)"
+    />
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
 </div>

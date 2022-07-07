@@ -1,1 +1,8 @@
-<p>players works!</p>
+<search (searchKey)="filterByKey($event)"></search>
+<div id="container">
+  <card-player
+    *ngFor="let player of getFilteredPlayers"
+    [player]="player"
+    highLight
+  ></card-player>
+</div>

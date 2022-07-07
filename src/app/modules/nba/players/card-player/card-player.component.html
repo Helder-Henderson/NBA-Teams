@@ -1,0 +1,17 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title class="alignTitle">
+      {{ player.FanDuelName }}
+    </mat-card-title>
+  </mat-card-header>
+  <img
+    class="box-image"
+    mat-card-image
+    src="{{ player.PhotoUrl }}"
+    alt="photo of {{ player.FanDuelName }}"
+  />
+  <mat-card-content class="footer-card">
+    <p>Height: {{ player?.Height }}</p>
+    <p>Salary: {{ player?.Salary | currency: "USD" }}</p>
+  </mat-card-content>
+</mat-card>

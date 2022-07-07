@@ -8,10 +8,13 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { TeamComponent } from './team/team.component';
 import { PlayersComponent } from './players/players.component';
-import { CardItemComponent } from './team/card-item/card-item.component';
+
 import { SearchComponent } from 'src/app/core/search/search.component';
 import { MatCardModule } from '@angular/material/card';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { HighLightDirective } from 'src/app/core/shared/high-light.directive';
+import { CardPlayerComponent } from './players/card-player/card-player.component';
+import { CardItemComponent } from './team/card-team/card-team.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,12 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
     CardItemComponent,
     PlayersComponent,
     SearchComponent,
+    HighLightDirective,
+    CardPlayerComponent,
   ],
   imports: [
-    BrowserAnimationsModule,
     AppRoutingModule,
     CommonModule,
-    BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
     MatInputModule,

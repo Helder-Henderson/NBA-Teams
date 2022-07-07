@@ -14,12 +14,7 @@ const routes: Routes = [
     component: PlayersComponent,
     title: 'NBA Player',
   },
-  {
-    path: 'nba/player',
-    component: PlayersComponent,
-    title: 'NBA Player',
-  },
-  { path: '',   redirectTo: 'nba/team', pathMatch: 'full' }, // 
+  { path: '', redirectTo: 'nba/team', pathMatch: 'full' }, //
 ];
 
 @NgModule({

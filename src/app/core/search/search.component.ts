@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 @Component({
@@ -7,15 +7,13 @@ import { EventEmitter } from '@angular/core';
   styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent implements OnInit {
-  
-  @Output() search = new EventEmitter<string>();
+  @Output() searchKey = new EventEmitter<string>();
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  searchKey(key: string){
-    console.log("KEY Pressioned:",key)
-    this.search.emit(key)
+  emitKeyPressioned(filter: string) {
+    this.searchKey.emit(filter);
   }
 }

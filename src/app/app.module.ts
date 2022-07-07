@@ -13,7 +13,7 @@ import { HeaderComponent } from './core/header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    HeaderComponent
   ],
   imports: [
     NBAModule,

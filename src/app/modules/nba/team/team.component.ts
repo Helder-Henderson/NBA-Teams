@@ -10,6 +10,7 @@ export class TeamComponent implements OnInit, OnDestroy {
   constructor(private service: NBAService) {}
 
   activeTeams: Array<any> = [];
+  filteredTeams: Array<any> = [];
 
   ngOnInit(): void {
     this.getTeams();
@@ -17,15 +18,17 @@ export class TeamComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {}
 
-  search(key: any) {
-    console.log(key);
+  filterByKey(key: string) {
+    this.filteredTeams = this.activeTeams.filter((item) => {
+      return item.Name.toLocaleLowerCase().indexOf(key) != -1;
+    });
   }
 
   getTeams() {
     this.service.getTeams().subscribe({
       next: (response) => {
-        console.log(response);
         this.activeTeams = response;
+        this.filteredTeams = this.activeTeams;
       },
     });
   }

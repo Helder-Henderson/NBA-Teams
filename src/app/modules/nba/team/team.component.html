@@ -1,4 +1,5 @@
-<search (searchKey)="search($event)"></search>
+<search (searchKey)="filterByKey($event)"></search>
 <div id="container">
-  <app-card-item *ngFor="let team of activeTeams" [team]="team"></app-card-item>
+  <card-team highLight *ngFor="let team of filteredTeams" [team]="team">
+  </card-team>
 </div>
